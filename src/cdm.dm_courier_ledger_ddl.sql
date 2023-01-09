@@ -12,5 +12,5 @@ CREATE TABLE cdm.dm_courier_ledger (
 	courier_order_sum numeric(14,2) DEFAULT (0) CHECK(courier_order_sum >= 0),
 	courier_tips_sum numeric(14,2) DEFAULT (0) CHECK(courier_tips_sum >= 0),
 	courier_reward_sum numeric(14,2) DEFAULT (0) CHECK(courier_reward_sum >= 0),
-	CONSTRAINT dm_courier_ledger_courier_id_settlement_month_unq UNIQUE (courier_id, settlement_month)
+	CONSTRAINT dm_courier_ledger_courier_id_settlement_month_unq UNIQUE (courier_id, settlement_year, settlement_month)
 );
